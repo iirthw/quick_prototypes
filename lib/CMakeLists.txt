@@ -1,12 +1,8 @@
-project (QuickPrototypesLib)
-
-include_directories (public public)
-
 set (
     LIB_HEADERS
     # public
-    public/Image.h
-    public/ImageAtlas.h
+    "public/Image.h"
+    "public/ImageAtlas.h"
     )
 
 set (
@@ -16,11 +12,11 @@ set (
     "impl/ImageAtlas.cpp"
     )
 
-message ("<==== Found QuickPrototypesLib HEADERS:\n ${LIB_HEADERS} \n====>")
-message ("<==== Found QuickPrototypesLib SOURCES:\n ${LIB_SOURCES} \n====>")
 
-add_library (QuickPrototypesLib STATIC ${LIB_SOURCES})
+set (SOURCE_FILES ${LIB_HEADERS} ${LIB_SOURCES})
 
-target_include_directories (QuickPrototypesLib PUBLIC
-                            public
-                           )
+add_library (${CMAKE_PROJECT_NAME} STATIC ${SOURCE_FILES})
+target_include_directories (
+    ${CMAKE_PROJECT_NAME} 
+    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/public
+    )

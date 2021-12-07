@@ -1,7 +1,10 @@
-cmake_minimum_required (VERSION 3.2)
-set (CMAKE_CXX_STANDARD 11)
+cmake_minimum_required (VERSION 3.19)
 
-project ("QuickPrototypes")
+set (CMAKE_CXX_STANDARD 14)
+project (QuickPrototypes)
 
-add_subdirectory ("lib")
-add_subdirectory ("test")
+# Group CMake predefined targets in one VS folder
+set_property (GLOBAL PROPERTY USE_FOLDERS ON)
+
+add_subdirectory (lib)
+add_subdirectory (test)
