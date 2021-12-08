@@ -3,7 +3,7 @@ include (${PROJECT_SOURCE_DIR}/cmake/download_gtest.cmake)
 
 project (RunUnitTests)
 
-set (SOURCE_FILES test_image.cpp)
+set (SOURCE_FILES test_image.cpp test_rectangle.cpp)
 add_executable (${PROJECT_NAME} main.cpp ${SOURCE_FILES})
 
 # set VS startup project
