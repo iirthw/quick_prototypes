@@ -14,6 +14,7 @@ namespace util
 
 	inline bool isZero(double x)
 	{
-		return isEqual(x, 0.0);
+        const double epsilon = 1e-8;
+        return std::abs(x) <= epsilon;
 	}
 } // namespace util
