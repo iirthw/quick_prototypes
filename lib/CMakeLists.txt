@@ -3,6 +3,8 @@ set (
     # public
     "public/Image.h"
     "public/ImageAtlas.h"
+    "public/Rectangle.h"
+    "public/util/Utils.h"
     )
 
 set (
