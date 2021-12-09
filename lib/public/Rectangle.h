@@ -9,7 +9,7 @@ namespace geom
 	template <typename T>
 	struct Rectangle
 	{
-        Rectangle() = default;
+        Rectangle();
 		Rectangle(T xval, T yval, T wval, T hval);
 		T area() const;
 
@@ -20,6 +20,14 @@ namespace geom
 	}; // struct Rectangle
 
 	// ------------------------------------------------------------------------
+
+    template <typename T>
+    Rectangle<T>::Rectangle()
+    : x(0.0f)
+    , y(0.0f)
+    , width(0.0f)
+    , height(0.0f)
+    {}
 
 	template <typename T>
 	Rectangle<T>::Rectangle(T xval, T yval, T wval, T hval)
