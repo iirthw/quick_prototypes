@@ -9,10 +9,10 @@ TEST(RectangleTest, noargCtor)
 {
 	geom::Rect rect;
 
-	ASSERT_EQ(rect.x, 0.0f);
-	ASSERT_EQ(rect.y, 0.0f);
-	ASSERT_EQ(rect.width, 0.0f);
-	ASSERT_EQ(rect.height, 0.0f);
+	ASSERT_TRUE(isZero(rect.x));
+	ASSERT_TRUE(isZero(rect.y));
+	ASSERT_TRUE(isZero(rect.width));
+	ASSERT_TRUE(isZero(rect.height));
 }
 
 TEST(RectangleTest, area)
