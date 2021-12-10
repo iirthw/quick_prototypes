@@ -4,6 +4,7 @@ set (
     "public/Image.h"
     "public/ImageAtlas.h"
     "public/Rectangle.h"
+    "public/core/vec2.h"
     "public/util/Utils.h"
     )
 
